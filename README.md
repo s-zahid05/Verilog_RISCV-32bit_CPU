@@ -1,5 +1,13 @@
 # Verilog_RISCV32bit_CPU
-This project focuses on the implementation of a fully functioning single-cycle RISC-V, 32-bit CPU on an FPGA. The design encompasses several key components, including a register file, program counter (PC), data memory, instruction memory, arithmetic logic unit (ALU), immediate generator (imm_gen), and a control unit. Each of these components are connected to execute RISC-V instructions efficiently. Below you will find a table that includes all the instructions that have been implemented and tested so far; what remains are the load/store byte instructions and the branching instructions.
+This project focuses on the implementation of a fully functioning single-cycle RISC-V, 32-bit CPU on an FPGA. The design encompasses several key components, including a register file, program counter (PC), data memory, instruction memory, arithmetic logic unit (ALU), immediate generator (imm_gen), and a control unit. Each of these components are connected to execute RISC-V instructions efficiently.
+
+Below is an illustration of the overall CPU architecture:
+![Scheme-it-export-RISC-V-Arch32-2024-11-03-19-36](https://github.com/user-attachments/assets/329b0414-3d94-4842-985f-eab31c1b9f58)
+Note: This diagram provides a simplified view, excluding the control unit.
+
+Future updates to the CPU will include the addition of pipelining, branch prediction, and a forwarding unit to support efficient data hazard management. While no specific timeline is set, these enhancements are intended to significantly improve performance by enabling concurrent instruction execution.
+
+Below you will find a table that includes all the instructions that have been implemented and tested so far; what remains are the load/store byte instructions and the branching instructions.
 
 | Instructions | Opcode  | funct3 | funct7  | Type |
 | ------------ | ------- | ------ | ------- | ---- |
@@ -22,3 +30,5 @@ This project focuses on the implementation of a fully functioning single-cycle R
 | SRAI         | 0010011 | 101    | 0100000 | I    |
 | SLTI         | 0010011 | 010    | 0000000 | I    |
 | SLTUI        | 0010011 | 011    | 0000000 | I    |
+
+
