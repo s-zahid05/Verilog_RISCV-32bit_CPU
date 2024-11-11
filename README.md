@@ -7,7 +7,7 @@ Note: This diagram provides a simplified view, excluding the control unit.
 
 Future updates to the CPU will include the addition of pipelining, branch prediction, and a forwarding unit to support efficient data hazard management. While no specific timeline is set, these enhancements are intended to significantly improve performance by enabling concurrent instruction execution.
 
-Below you will find a table that includes all the instructions that have been implemented and tested so far; what remains are the load/store byte instructions and the branching instructions.
+Below you will find a table that includes all the instructions that have been implemented and tested so far; what remains are the branching instructions, or more accurately the testing of the branching instructions.
 
 | Instructions | Opcode  | funct3 | funct7  | Type |
 | ------------ | ------- | ------ | ------- | ---- |
@@ -30,5 +30,8 @@ Below you will find a table that includes all the instructions that have been im
 | SRAI         | 0010011 | 101    | 0100000 | I    |
 | SLTI         | 0010011 | 010    | 0000000 | I    |
 | SLTUI        | 0010011 | 011    | 0000000 | I    |
+| LUI          | 0110111 |        |         | U    |
+| SW           | 0100011 |        |         | S    |
+| LW           | 0000011 |        |         | I    |
 
 
