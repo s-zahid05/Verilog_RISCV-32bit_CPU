@@ -7,7 +7,7 @@ Note: This diagram provides a simplified view, excluding the control unit.
 
 Future updates to the CPU will include the addition of pipelining, branch prediction, and a forwarding unit to support efficient data hazard management. While no specific timeline is set, these enhancements are intended to significantly improve performance by enabling concurrent instruction execution.
 
-Below you will find a table that includes all the instructions that have been implemented and tested so far; what remains are the branching instructions, or more accurately the testing of the branching instructions.
+Below you will find a table that includes all the instructions that have been implemented for the single cycle processor.
 
 | Instructions | Opcode  | funct3 | funct7  | Type |
 | ------------ | ------- | ------ | ------- | ---- |
@@ -33,5 +33,11 @@ Below you will find a table that includes all the instructions that have been im
 | LUI          | 0110111 |        |         | U    |
 | SW           | 0100011 |        |         | S    |
 | LW           | 0000011 |        |         | I    |
+| BLT          | 1100011 | 100    |         | B    |
+| BGE          | 1100011 | 101    |         | B    |
+| BEQ          | 1100011 | 000    |         | B    |
+| BLTU         | 1100011 | 110    |         | B    |
+| BGEU         | 1100011 | 111    |         | B    |
+| BNE          | 1100011 | 001    |         | B    |
 
 
